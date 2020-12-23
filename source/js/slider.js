@@ -1,6 +1,7 @@
 function slider () {
 
     let offset = 0;
+    let slideIndex = 1;
     const prev = document.querySelector('.slider__prev');
     const next = document.querySelector('.slider__next');
 
@@ -17,20 +18,24 @@ function slider () {
     const slidesFieldWidth = +wrapperWidth * slides.length;
 
     next.addEventListener('click', () => {
-        if (offset >= (slidesFieldWidth - wrapperWidth)) {
+        if (slideIndex === slides.length) {
             offset = 0;
+            slideIndex = 1;
         } else {
             offset += +wrapperWidth; 
+            slideIndex++;
         }
 
         slidesField.style.transform = `translateX(-${offset}px)`;
     });
 
     prev.addEventListener('click', () => {
-        if (offset <= 0) {
+        if (slideIndex === 1) {
             offset = (slidesFieldWidth - wrapperWidth);
+            slideIndex = slides.length;
         } else {
             offset -= +wrapperWidth;
+            slideIndex--;
         }
         
         slidesField.style.transform = `translateX(-${offset}px)`;
