@@ -1,0 +1,67 @@
+.promo {
+  display: block;
+  padding: 0 20px;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 1px;
+  }
+}
+
+.promo__block {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: relative;
+    grid-column: 1 span;
+    max-height: 540px;
+    overflow: hidden;
+  }
+}
+
+.promo__pic {
+  display: block;
+  height: fit-content;
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-color: #434242;
+}
+
+.promo__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9),  rgba(0, 0, 0, 0));
+}
+
+.promo__inner {
+  width: 90%;
+  position: absolute;
+  bottom: 30px;
+  left: 5%;
+  text-align: center;
+  color: white;
+}
+
+.promo__title {
+  font-family: $main-font;
+  margin: 15px 0;
+  font-size: 30px;
+}
+
+.promo__link {
+  font-family: $secondary-font;
+  color: #ef7f1a;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: underline;
+
+  &hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}

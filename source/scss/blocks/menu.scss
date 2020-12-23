@@ -1,0 +1,64 @@
+.menu {
+  padding: 0 20px;
+}
+
+.menu__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.menu__item {
+  grid-column: 1 span;
+  background-color: black;
+  border-top: 1px solid white;
+}
+
+.menu__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 0;
+  transition: 0.3s all;
+
+  font-family: $main-font;
+  font-weight: $normal;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: white;
+
+  &:hover,
+  &:focus {
+    transition: 0.3 all;
+    color: $orange;
+  }
+
+  &:hover .menu__icon,
+  &:focus .menu__icon {
+    transition: 0.3 all;
+    fill: $orange;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.menu__icon {
+  margin-bottom: 5px;
+  fill: white;
+  transition: 0.3 all;
+
+  @media (min-width: $tablet-width) {
+    height: 45px;
+    width: 45px;
+  }
+}

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Yanone+Kaffeesatz:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>InSales</title>
+</head>
+<body>
+
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
+  <header>
+    <nav class="main-nav main-nav__nojs">
+      <div class="main-nav__wrapper">
+        <a class="main-nav__logo-link" href="#">
+          <img width="125" height="30" src="img/monoteka.png" alt="logo">
+        </a>
+
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть/Закрыть меню</span>
+          <span class="main-nav__close-btn"></span>
+        </button>
+      </div>
+      
+      <ul class="main-nav__list main-nav__list--about">
+        <li class="main-nav__item">
+          <button class="main-nav__btn">Каталог</button>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Компания</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Новости</a>
+        </li>
+      </ul>
+
+      <ul class="main-nav__list main-nav__list--user">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Поставщикам</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Контакты</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Кабинет</a>
+        </li>
+
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">
+            <svg class="main-nav__icon main-nav__icon--search" width="18" height="18">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+            <span class="visually-hidden">Поиск по сайту</span>
+          </a>
+        </li>
+
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">
+            <svg class="main-nav__icon main-nav__icon--basket" width="20" height="20">
+              <use xlink:href="#icon-basket"></use>
+            </svg>
+            <span class="visually-hidden">Корзина</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Monoteka - интернет магазин женской одежды.</h1>
+    <section class="promo">
+      <div class="slider" data-width="true">
+        <ul class="slider__list">
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" srcset="img/image-1.webp">
+              <img class="slider__pic" src="img/image-1.jpg" alt="вечерние платья Monoteka">
+            </picture>
+          </li>
+
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" srcset="img/image-1-1.webp">
+              <img class="slider__pic" src="img/image-1-1.jpg" alt="вечерние платья Monoteka">
+            </picture>
+          </li>
+
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" srcset="img/image-1-2.webp">
+              <img class="slider__pic" src="img/image-1-2.jpg" alt="вечерние платья Monoteka">
+            </picture>
+          </li>
+        </ul>
+        <div class="slider__overlay"></div>
+
+        <div class="slider__controls">
+          <button class="slider__prev">
+            <svg width="20" height="12">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg>
+          </button>
+
+          <button class="slider__next">
+            <svg width="20" height="12">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="slider__inner">
+          <p class="slider__slogan">Monoteka-group — лучшие моменты  жизни вместе с&#160;нашими платьями</p>
+          <button class="slider__btn">Купить</button>
+        </div>
+      </div>
+
+      <div class="promo__block">
+        <picture>
+          <source type="image/webp" srcset="img/image-2.webp">
+          <img class="promo__pic" src="img/image-2.jpg" alt="пиджак Monoteka">
+        </picture>
+        <div class="promo__overlay"></div>
+        <div class="promo__inner">
+          <h3 class="promo__title">Пиджаки</h3>
+          <a class="promo__link" href="#">в наших магазинах</a>
+        </div>
+      </div>
+
+      <div class="promo__block">
+        <picture>
+          <source type="image/webp" srcset="img/image-3.webp">
+          <img class="promo__pic" src="img/image-3.jpg" alt="деловой стиль Monoteka">
+        </picture>
+        <div class="promo__overlay"></div>
+        <div class="promo__inner">
+          <h3 class="promo__title">Деловой стиль</h3>
+          <a class="promo__link" href="#">узнать больше</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            <svg class="menu__icon" width="25" height="25">
+              <use xlink:href="#icon-dress"></use>
+            </svg>
+            Платья
+          </a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            <svg class="menu__icon" width="25" height="25">
+              <use xlink:href="#icon-coat"></use>
+            </svg>
+            Шубы
+          </a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            <svg class="menu__icon" width="25" height="25">
+              <use xlink:href="#icon-blazer"></use>
+            </svg>
+            Пиджаки
+          </a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            <svg class="menu__icon" width="25" height="25">
+              <use xlink:href="#icon-blouse"></use>
+            </svg>
+            Блузки
+          </a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            <svg class="menu__icon" width="25" height="25">
+              <use xlink:href="#icon-jeans"></use>
+            </svg>
+            Джинсы
+          </a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            <svg class="menu__icon" width="25" height="25">
+              <use xlink:href="#icon-shirts"></use>
+            </svg>
+            Рубашки
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="pro">
+      <nav class="pro__nav">
+        <ul class="pro__nav-list">
+          <li class="pro__item pro__item--active">
+            <a href="#">Лучшие предложения недели</a>
+          </li>
+          <li class="pro__item">
+            <a href="#">Новинки</a>
+          </li>
+          <li class="pro__item">
+            <a href="#">Рекомендуем</a>
+          </li>
+        </ul>
+
+        <div class="pro__controls">
+          <button class="pro__prev">
+            <svg width="40" height="12">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg>
+          </button>
+
+          <button class="pro__next">
+            <svg width="40" height="12">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div class="cards">
+        <ul class="cards__list">
+
+          <li class="cards__item" tabindex="24">
+            <div class="cards__wrapper">
+              <picture>
+                <source type="image/webp" srcset="img/image-4.webp">
+                <img class="cards__pic" src="img/image-4.jpg" alt="кожаная юбка Monoteka">
+              </picture>
+
+              <div class="cards__label">
+                <svg width="14" height="20">
+                  <use xlink:href="#icon-flag-france"></use>
+                </svg>
+                <span class="cards__year">new</span>
+              </div>
+
+              <div class="cards__extra">
+                <table class="cards__table">
+                  <tr>
+                    <td>Материал</td>
+                    <td class="cards__value">Хлопок</td>
+                  </tr>
+                  <tr>
+                    <td>Сезон</td>
+                    <td class="cards__value">Лето</td>
+                  </tr>
+                  <tr>
+                    <td>Страна-производитель</td>
+                    <td class="cards__value">Франция</td>
+                  </tr>
+                  <tr>
+                    <td>Длина</td>
+                    <td class="cards__value">Мини</td>
+                  </tr>
+                </table>
+                <a class="cards__link" href="#" tabindex="24">Перейти в карточку</a>
+              </div>
+
+              <div class="cards__overlay"></div>
+            </div>
+  
+            <div class="cards__description">
+              <h3 class="cards__title">Кожаная юбка</h3>
+              <p class="cards__text">Описание: Полосатая кофта из&#160;полосатого трикотажа, без&#160;молнии</p>
+
+              <div class="cards__inner">
+                <div class="cards__sizes">
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24" checked></input>
+                    <span class="cards__size">44</span>
+                  </label>
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24"></input>
+                    <span class="cards__size">46</span>
+                  </label>
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24"></input>
+                    <span class="cards__size">48</span>
+                  </label>
+                  </br>
+                  <p class="cards__size-text">Размер</p>
+                </div>
+  
+                <div class="cards__prices">
+                  <span class="cards__price">790&#160;p.</span>
+                  <a class="cards__basket" href="#" tabindex="24">
+                    <svg class="cards__icon" width="20" height="20">
+                      <use xlink:href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+  
+          <li class="cards__item" tabindex="24">
+            <div class="cards__wrapper">
+              <picture>
+                <source type="image/webp" srcset="img/image-5.webp">
+                <img class="cards__pic" src="img/image-5.jpg" alt="платье в горох Monoteka">
+              </picture>
+
+              <div class="cards__label">
+                <svg width="14" height="20">
+                  <use xlink:href="#icon-flag-italy"></use>
+                </svg>
+                <span class="cards__year">sale</span>
+              </div>
+
+              <div class="cards__extra">
+                <table class="cards__table">
+                  <tr>
+                    <td>Материал</td>
+                    <td class="cards__value">Хлопок</td>
+                  </tr>
+                  <tr>
+                    <td>Сезон</td>
+                    <td class="cards__value">Лето</td>
+                  </tr>
+                  <tr>
+                    <td>Страна-производитель</td>
+                    <td class="cards__value">Франция</td>
+                  </tr>
+                  <tr>
+                    <td>Длина</td>
+                    <td class="cards__value">Мини</td>
+                  </tr>
+                </table>
+                <a class="cards__link" href="#" tabindex="24">Перейти в карточку</a>
+              </div>
+
+              <div class="cards__overlay"></div>
+            </div>
+    
+            <div class="cards__description">
+              <h3 class="cards__title">Платье в горох с&#160;поясом</h3>
+              <p class="cards__text">Описание: Полосатая кофта из&#160;полосатого трикотажа, без&#160;молнии</p>
+
+              <div class="cards__inner">
+                <div class="cards__sizes">
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24" checked></input>
+                    <span class="cards__size">44</span>
+                  </label>
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24"></input>
+                    <span class="cards__size">46</span>
+                  </label>
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24"></input>
+                    <span class="cards__size">48</span>
+                  </label>
+                  </br>
+                  <p class="cards__size-text">Размер</p>
+                </div>
+  
+                <div class="cards__prices">
+                  <span class="cards__price cards__price--discount">1990&#160;p.</span>
+                  </br>
+                  <span class="cards__price">790&#160;p.</span>
+                  <a class="cards__basket" href="#" tabindex="24">
+                    <svg class="cards__icon" width="20" height="20">
+                      <use xlink:href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+  
+          <li class="cards__item" tabindex="24">
+            <div class="cards__wrapper">
+              <picture>
+                <source type="image/webp" srcset="img/image-6.webp">
+                <img class="cards__pic" src="img/image-6.jpg" alt="розовое платье Monoteka">
+              </picture>
+
+              <div class="cards__label">
+                <svg width="14" height="20">
+                  <use xlink:href="#icon-flag-france"></use>
+                </svg>
+                <span class="cards__year">new</span>
+              </div>
+
+              <div class="cards__extra">
+                <table class="cards__table">
+                  <tr>
+                    <td>Материал</td>
+                    <td class="cards__value">Хлопок</td>
+                  </tr>
+                  <tr>
+                    <td>Сезон</td>
+                    <td class="cards__value">Лето</td>
+                  </tr>
+                  <tr>
+                    <td>Страна-производитель</td>
+                    <td class="cards__value">Франция</td>
+                  </tr>
+                  <tr>
+                    <td>Длина</td>
+                    <td class="cards__value">Мини</td>
+                  </tr>
+                </table>
+                <a class="cards__link" href="#" tabindex="24">Перейти в карточку</a>
+              </div>
+
+              <div class="cards__overlay"></div>
+            </div>
+
+            <div class="cards__description">
+              <h3 class="cards__title">Розовое платье</h3>
+              <p class="cards__text">Описание: Полосатая кофта из&#160;полосатого трикотажа, без&#160;молнии</p>
+
+              <div class="cards__inner">
+                <div class="cards__sizes">
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24" checked></input>
+                    <span class="cards__size">44</span>
+                  </label>
+                  </br>
+                  <p class="cards__size-text">Размер</p>
+                </div>
+  
+                <div class="cards__prices">
+                  <span class="cards__price">790&#160;p.</span>
+                  <a class="cards__basket" href="#" tabindex="24">
+                    <svg class="cards__icon" width="20" height="20">
+                      <use xlink:href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+  
+          <li class="cards__item" tabindex="24">
+            <div class="cards__wrapper">
+              <picture>
+                <source type="image/webp" srcset="img/image-7.webp">
+                <img class="cards__pic" src="img/image-7.jpg" alt="полосатая кофта Monoteka">
+              </picture>
+
+              <div class="cards__label">
+                <svg width="14" height="20">
+                  <use xlink:href="#icon-flag-france"></use>
+                </svg>
+                <span class="cards__year">new</span>
+              </div>
+
+              <div class="cards__extra">
+                <table class="cards__table">
+                  <tr>
+                    <td>Материал</td>
+                    <td class="cards__value">Хлопок</td>
+                  </tr>
+                  <tr>
+                    <td>Сезон</td>
+                    <td class="cards__value">Лето</td>
+                  </tr>
+                  <tr>
+                    <td>Страна-производитель</td>
+                    <td class="cards__value">Франция</td>
+                  </tr>
+                  <tr>
+                    <td>Длина</td>
+                    <td class="cards__value">Мини</td>
+                  </tr>
+                </table>
+                <a class="cards__link" href="#" tabindex="24">Перейти в карточку</a>
+              </div>
+
+              <div class="cards__overlay"></div>
+            </div>
+
+            <div class="cards__description">
+              <h3 class="cards__title">Полосатая кофта</h3>
+              <p class="cards__text">Описание: Полосатая кофта из&#160;полосатого трикотажа, без&#160;молнии</p>
+
+              <div class="cards__inner">
+                <div class="cards__sizes">
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24" checked></input>
+                    <span class="cards__size">44</span>
+                  </label>
+                  </br>
+                  <p class="cards__size-text">Размер</p>
+                </div>
+  
+                <div class="cards__prices">
+                  <span class="cards__price">790&#160;p.</span>
+                  <a class="cards__basket" href="#" tabindex="24">
+                    <svg class="cards__icon" width="20" height="20">
+                      <use xlink:href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards__item" tabindex="24">
+            <div class="cards__wrapper">
+              <picture>
+                <source type="image/webp" srcset="img/image-8.webp">
+                <img class="cards__pic" src="img/image-8.jpg" alt="платье в горох Monoteka">
+              </picture>
+
+              <div class="cards__label">
+                <svg width="14" height="20">
+                  <use xlink:href="#icon-flag-france"></use>
+                </svg>
+                <span class="cards__year">new</span>
+              </div>
+
+              <div class="cards__extra">
+                <table class="cards__table">
+                  <tr>
+                    <td>Материал</td>
+                    <td class="cards__value">Хлопок</td>
+                  </tr>
+                  <tr>
+                    <td>Сезон</td>
+                    <td class="cards__value">Лето</td>
+                  </tr>
+                  <tr>
+                    <td>Страна-производитель</td>
+                    <td class="cards__value">Франция</td>
+                  </tr>
+                  <tr>
+                    <td>Длина</td>
+                    <td class="cards__value">Мини</td>
+                  </tr>
+                </table>
+                <a class="cards__link" href="#" tabindex="24">Перейти в карточку</a>
+              </div>
+
+              <div class="cards__overlay"></div>
+            </div>
+
+            <div class="cards__description">
+              <h3 class="cards__title">Платье в горох с поясом</h3>
+              <p class="cards__text">Описание: Полосатая кофта из&#160;полосатого трикотажа, без&#160;молнии</p>
+
+              <div class="cards__inner">
+                <div class="cards__sizes">
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24" checked></input>
+                    <span class="cards__size">44</span>
+                  </label>
+                  </br>
+                  <p class="cards__size-text">Размер</p>
+                </div>
+  
+                <div class="cards__prices">
+                  <span class="cards__price">990&#160;p.</span>
+                  <a class="cards__basket" href="#" tabindex="24">
+                    <svg class="cards__icon" width="20" height="20">
+                      <use xlink:href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards__item" tabindex="24">
+            <div class="cards__wrapper">
+              <picture>
+                <source type="image/webp" srcset="img/image-9.webp">
+                <img class="cards__pic" src="img/image-9.jpg" alt="платье Monoteka">
+              </picture>
+
+              <div class="cards__label">
+                <svg width="14" height="20">
+                  <use xlink:href="#icon-flag-italy"></use>
+                </svg>
+                <span class="cards__year">sale</span>
+              </div>
+
+              <div class="cards__extra">
+                <table class="cards__table">
+                  <tr>
+                    <td>Материал</td>
+                    <td class="cards__value">Хлопок</td>
+                  </tr>
+                  <tr>
+                    <td>Сезон</td>
+                    <td class="cards__value">Лето</td>
+                  </tr>
+                  <tr>
+                    <td>Страна-производитель</td>
+                    <td class="cards__value">Франция</td>
+                  </tr>
+                  <tr>
+                    <td>Длина</td>
+                    <td class="cards__value">Мини</td>
+                  </tr>
+                </table>
+                <a class="cards__link" href="#" tabindex="24">Перейти в карточку</a>
+              </div>
+
+              <div class="cards__overlay"></div>
+            </div>
+
+            <div class="cards__description">
+              <h3 class="cards__title">Платье</h3>
+              <p class="cards__text">Описание: Полосатая кофта из&#160;полосатого трикотажа, без&#160;молнии</p>
+
+              <div class="cards__inner">
+                <div class="cards__sizes">
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24" checked></input>
+                    <span class="cards__size">44</span>
+                  </label>
+                  <label class="cards__checkbox-label">
+                    <input class="cards__checkbox-input" type="checkbox" tabindex="24"></input>
+                    <span class="cards__size">48</span>
+                  </label>
+                  </br>
+                  <p class="cards__size-text">Размер</p>
+                </div>
+  
+                <div class="cards__prices">
+                  <span class="cards__price">1790&#160;p.</span>
+                  <a class="cards__basket" href="#" tabindex="24">
+                    <svg class="cards__icon" width="20" height="20">
+                      <use xlink:href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/menu.min.js"></script>
+  <script src="js/slider.min.js"></script>
+</body>
+</html>

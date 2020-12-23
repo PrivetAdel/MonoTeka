@@ -1,0 +1,146 @@
+.slider {
+  position: relative;
+  max-height: 540px;
+  overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 4 span;
+  }
+}
+
+.slider__list {
+  display: flex;
+  width: max-content;
+  margin: 0;
+  transition: 0.5s all;
+}
+
+.slider__pic {
+  display: block;
+  background-color: $grey;
+  width: calc(100vw - 40px);
+
+  @media (min-width: $tablet-width) {
+    height: fit-content;
+    object-fit: cover;
+    object-position: 70% 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc((100vw - 40px) / 6 * 4);
+  }
+}
+
+.slider__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9),  rgba(0, 0, 0, 0));
+}
+
+.slider__controls {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 40%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    top: 50%;
+  }
+}
+
+.slider__prev,
+.slider__next {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid $grey;
+  background-color: $light-grey;
+  padding: 0;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+
+    svg {
+      width: 40px;
+    }
+  }
+}
+
+.slider__inner {
+  position: absolute;
+  max-width: 260px;
+  width: 70%;
+  bottom: 15%;
+  left: 20%;
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;;
+  font-weight: 700;
+  font-size: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    max-width: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 48px;
+    line-height: 58px;
+    max-width: 540px;
+    left: 18%;
+  }
+}
+
+.slider__slogan {
+  margin: 10px 0;
+}
+
+.slider__btn {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 15px;
+  color: white;
+  background-color: $orange;
+  border: 2px solid white;
+  padding: 7px 20px 5px;
+  transition: 0.3s all;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 9px 35px 7px;
+    border: 3px solid white;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 11px 55px;
+    border: 4px solid white;
+    margin-top: 21px;
+  }
+}
