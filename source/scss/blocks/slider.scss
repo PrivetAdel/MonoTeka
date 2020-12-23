@@ -10,7 +10,6 @@
 
 .slider__list {
   display: flex;
-  width: max-content;
   margin: 0;
   transition: 0.5s all;
 }
@@ -18,16 +17,10 @@
 .slider__pic {
   display: block;
   background-color: $grey;
-  width: calc(100vw - 40px);
 
   @media (min-width: $tablet-width) {
     height: fit-content;
     object-fit: cover;
-    object-position: 70% 50%;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: calc((100vw - 40px) / 6 * 4);
   }
 }
 
@@ -85,7 +78,7 @@
 .slider__inner {
   position: absolute;
   max-width: 260px;
-  width: 70%;
+  width: 60%;
   bottom: 15%;
   left: 20%;
   color: white;

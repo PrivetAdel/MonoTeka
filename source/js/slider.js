@@ -1,24 +1,27 @@
-function slider (wrapperSelector, slidesFieldSelector, slidesSelector, prevSelector, nextSelector) {
+function slider () {
 
     let offset = 0;
-    const wrapper = document.querySelector(wrapperSelector);
+    const prev = document.querySelector('.slider__prev');
+    const next = document.querySelector('.slider__next');
+
+    const wrapper = document.querySelector('.slider');
     const wrapperWidth = window.getComputedStyle(wrapper).width.replace(/[a-z]+/g, '');
 
-    const slidesField = document.querySelector(slidesFieldSelector);
-    const slides = document.querySelectorAll(slidesSelector);
+    const slidesField = document.querySelector('.slider__list');
+    const slides = document.querySelectorAll('.slider__item');
 
-    const prev = document.querySelector(prevSelector);
-    const next = document.querySelector(nextSelector);
+    slides.forEach((slide) => {
+        slide.style.width = `${wrapperWidth}px`
+    });
 
-    const slideWidth = `${wrapper.dataset.width ?  wrapperWidth  : (window.getComputedStyle(slides[0]).width.replace(/[a-z]+/g, ''))}`;
-
-    const slidesFieldWidth = `${wrapper.dataset.width ?  (wrapperWidth * slides.length) : (window.getComputedStyle(slidesField).width.replace(/[a-z]+/g, ''))}`;
+    const slidesFieldWidth = +wrapperWidth * slides.length;
+    slidesField.style.width = `${slidesFieldWidth}px`;
 
     next.addEventListener('click', () => {
         if (offset >= (slidesFieldWidth - wrapperWidth)) {
             offset = 0;
         } else {
-            offset += +slideWidth; 
+            offset += +wrapperWidth; 
         }
 
         slidesField.style.transform = `translateX(-${offset}px)`;
@@ -28,19 +31,12 @@ function slider (wrapperSelector, slidesFieldSelector, slidesSelector, prevSelec
         if (offset <= 0) {
             offset = (slidesFieldWidth - wrapperWidth);
         } else {
-            offset -= +slideWidth;
+            offset -= +wrapperWidth;
         }
         
         slidesField.style.transform = `translateX(-${offset}px)`;
     });
 }
 
-slider('.cards', '.cards__list', '.cards__item', '.pro__prev', '.pro__next');
-
-slider('.slider', '.slider__list', '.slider__item', '.slider__prev', '.slider__next');
-
-window.addEventListener('resize', function() {
-    slider('.cards', '.cards__list', '.cards__item', '.pro__prev', '.pro__next');
-
-    slider('.slider', '.slider__list', '.slider__item', '.slider__prev', '.slider__next');
-});
+slider();
+window.addEventListener('resize', slider);
