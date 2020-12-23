@@ -11,7 +11,7 @@
 }
 
 .cards__item {
-  width: calc(100vw - 40px);
+  // width: calc(100vw - 40px);
   position: relative;
 
   &:focus,
@@ -27,13 +27,13 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
-    width: calc((100vw - 40px) / 3);
-  }
+  // @media (min-width: $tablet-width) {
+  //   width: calc((100vw - 40px) / 3);
+  // }
 
-  @media (min-width: $desktop-width) {
-    width: calc((100vw - 40px) / 4);
-  }
+  // @media (min-width: $desktop-width) {
+  //   width: calc((100vw - 40px) / 4);
+  // }
 }
 
 .cards__wrapper {

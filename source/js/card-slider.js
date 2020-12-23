@@ -8,10 +8,26 @@ function cardSlider() {
   const wrapperWidth = window.getComputedStyle(wrapper).width.replace(/[a-z]+/g, '');
 
   const slidesField = document.querySelector('.cards__list');
-  const slidesFieldWidth = window.getComputedStyle(slidesField).width.replace(/[a-z]+/g, '');
-  
   const slides = document.querySelectorAll('.cards__item');
-  const slideWidth = window.getComputedStyle(slides[0]).width.replace(/[a-z]+/g, '');
+
+  let slideWidth;
+
+  switch (true) {
+    case (wrapperWidth >= 728 && wrapperWidth < 1160):
+      slideWidth = +wrapperWidth / 3;
+      break;
+    case (wrapperWidth >= 1160):
+      slideWidth = +wrapperWidth / 4;
+      break;
+    default:
+      slideWidth = +wrapperWidth;
+  }
+  
+  slides.forEach((slide) => {
+    slide.style.width = `${slideWidth}px`;
+  })
+
+  const slidesFieldWidth = slideWidth * slides.length;
 
   next.addEventListener('click', () => {
     if (offset >= (slidesFieldWidth - wrapperWidth)) {
@@ -29,7 +45,7 @@ function cardSlider() {
     } else {
       offset -= +slideWidth;
     }
-    
+
     slidesField.style.transform = `translateX(-${offset}px)`;
   });
 }
