@@ -15,7 +15,6 @@ function slider () {
     });
 
     const slidesFieldWidth = +wrapperWidth * slides.length;
-    slidesField.style.width = `${slidesFieldWidth}px`;
 
     next.addEventListener('click', () => {
         if (offset >= (slidesFieldWidth - wrapperWidth)) {
