@@ -12,14 +12,14 @@
 }
 
 .pro__nav-list {
+  margin: 0;
   font-family: $main-font;
   font-size: 18px;
   line-height: 24px;
-  margin: 0;
 
   @media (min-width: $tablet-width) {
-    font-size: 24px;
     display: flex;
+    font-size: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -30,20 +30,24 @@
 
 .pro__controls {
   display: flex;
-  margin-left: auto;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  margin-left: auto;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
   }
 }
 
+.pro__next {
+  margin-left: 35px;
+}
+
 .pro__prev,
 .pro__next {
-  border: none;
   background-color: transparent;
+  border: none;
   transition: 0.3s all;
 
   &:hover,
@@ -56,17 +60,13 @@
   }
 }
 
-.pro__next {
-  margin-left: 35px;
-}
-
 .pro__item {
   &:not(:last-child) {
     margin-right: 20px;
   }
 
   &--active a {
-    color:$orange;
+    color: $orange;
     text-decoration: underline;
   }
 

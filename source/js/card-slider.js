@@ -22,7 +22,7 @@ function cardSlider() {
     default:
       slideWidth = +wrapperWidth;
   }
-  
+
   slides.forEach((slide) => {
     slide.style.width = `${slideWidth}px`;
   })
@@ -33,7 +33,7 @@ function cardSlider() {
     if (offset >= (slidesFieldWidth - wrapperWidth)) {
       offset = 0;
     } else {
-      offset += +slideWidth; 
+      offset += +slideWidth;
     }
 
     slidesField.style.transform = `translateX(-${offset}px)`;
@@ -52,4 +52,3 @@ function cardSlider() {
 
 cardSlider();
 window.addEventListener('resize', cardSlider);
-

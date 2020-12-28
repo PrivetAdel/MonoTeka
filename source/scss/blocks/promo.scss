@@ -13,8 +13,8 @@
   display: none;
 
   @media (min-width: $desktop-width) {
-    display: block;
     position: relative;
+    display: block;
     grid-column: 1 span;
     max-height: 540px;
     overflow: hidden;
@@ -33,31 +33,31 @@
   position: absolute;
   top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9),  rgba(0, 0, 0, 0));
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
 }
 
 .promo__inner {
-  width: 90%;
   position: absolute;
   bottom: 30px;
   left: 5%;
-  text-align: center;
+  width: 90%;
   color: white;
+  text-align: center;
 }
 
 .promo__title {
-  font-family: $main-font;
   margin: 15px 0;
+  font-family: $main-font;
   font-size: 30px;
 }
 
 .promo__link {
   font-family: $secondary-font;
-  color: #ef7f1a;
   font-size: 16px;
   line-height: 16px;
+  color: #ef7f1a;
   text-decoration: underline;
 
   &hover,
